@@ -1,0 +1,22 @@
+<h1>HELLO WORLD</h1>
+<span th:text="${yourName}">some thing name</span>
+
+<input th:value="${yourName}" type="text" value="some thing name"/>
+
+<img th:src="@{image1.webp}" style="width:250px;"/>
+
+<div>
+
+<ul>
+	<li th:each="todo : ${todoList}">
+		<span th:text="${todo}"></span>
+		<span th:text="${todo.length}"></span>
+		<span th:switch="true">
+			<span th:case="${todo.length} % 2 == 1">Odd</span>
+			<span th:case="${todo.length} % 2 == 0">Even</span>
+			<span th:case="*">ไม่มีทางถึง</span>
+		</span>
+	</li>
+</ul>
+
+</div>

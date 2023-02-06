@@ -1,0 +1,12 @@
+<h1>HANDLE OPTIONAL REQUESTPARAMS</h1>
+
+<h1>HELLO,
+<span th:text="${name}">JOhn Doe</span>
+
+<span th:if="${age.isPresent()}" 
+	  th:text="${age.get()}"></span> 
+	  
+<span th:if="${!age.isPresent()}">Unknown</span>
+
+Years old.
+</h1>
